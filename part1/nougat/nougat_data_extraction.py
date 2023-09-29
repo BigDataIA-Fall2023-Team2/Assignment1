@@ -8,7 +8,10 @@ st.title("Run Command in Streamlit")
 # Create an input field for the command
 uploaded_file = st.file_uploader("Upload a PDF file", type=["pdf"])
 
+
+
 if uploaded_file is not None:
+    
     # Define the output directory
     #output_directory = st.text_input("Enter the output directory")
 
@@ -17,6 +20,9 @@ if uploaded_file is not None:
    # output_directory = "/root/DAMG7245/Assignment1/Assignment1/part1/nougat"
     
     # Construct the command with the output file path
+    input_file_path= os.path.join(output_directory[:-1], uploaded_file.name)
+    with open(input_file_path, "wb") as pdf_file:
+        pdf_file.write(uploaded_file.read())
     output_file_path = os.path.join(output_directory[:-1], uploaded_file.name.replace(".pdf", ".mmd"))
     command = f"nougat {uploaded_file.name} -o {output_directory}"
 

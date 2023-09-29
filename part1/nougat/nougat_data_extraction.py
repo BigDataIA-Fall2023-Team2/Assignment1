@@ -10,13 +10,17 @@ uploaded_file = st.file_uploader("Upload a PDF file", type=["pdf"])
 
 if uploaded_file is not None:
     # Define the output directory
-    output_directory = st.text_input("Enter the output directory")
+    #output_directory = st.text_input("Enter the output directory")
 
+    output_directory = subprocess.check_output("pwd", shell=True, text=True)
+    st.write(output_directory)
    # output_directory = "/root/DAMG7245/Assignment1/Assignment1/part1/nougat"
     
     # Construct the command with the output file path
-    output_file_path = os.path.join(output_directory, uploaded_file.name.replace(".pdf", ".mmd"))
+    output_file_path = os.path.join(output_directory[:-1], uploaded_file.name.replace(".pdf", ".mmd"))
     command = f"nougat {uploaded_file.name} -o {output_directory}"
+
+
 
 
     st.write(command)
@@ -32,10 +36,11 @@ if uploaded_file is not None:
                 elapsed_time = end_time - start_time
 
                 st.success("Command executed successfully in {:.2f} seconds:".format(elapsed_time))
-                st.code(output)
-
+                # st.code(output)
+                st.write(output_file_path)
                 # Read and display the contents of the generated .mmd file
                 with open(output_file_path, "r") as mmd_file:
+        
                     mmd_content = mmd_file.read()
                     st.write("Contents of generated .mmd file:")
                     st.write(mmd_content)

@@ -23,6 +23,7 @@ if uploaded_file is not None:
     input_file_path= os.path.join(output_directory[:-1], uploaded_file.name)
     with open(input_file_path, "wb") as pdf_file:
         pdf_file.write(uploaded_file.read())
+    st.write("file written successfully")
     output_file_path = os.path.join(output_directory[:-1], uploaded_file.name.replace(".pdf", ".mmd"))
     command = f"nougat {uploaded_file.name} -o {output_directory}"
 

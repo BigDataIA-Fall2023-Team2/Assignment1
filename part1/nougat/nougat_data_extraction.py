@@ -45,6 +45,7 @@ if uploaded_file is not None:
                 st.success("Command executed successfully in {:.2f} seconds:".format(elapsed_time))
                 # st.code(output)
                 st.write(output_file_path)
+                st.write("file written")
                 # Read and display the contents of the generated .mmd file
                 with open(output_file_path, "r") as mmd_file:
         

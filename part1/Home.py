@@ -19,7 +19,9 @@ else:
 library_option = st.radio("Select the library to sumamrize your pdf", ('PyPdf', 'Nougat'))
 
 if library_option == 'Nougat':
+    st.write("Launch this notebook to generate localtunnel link (https://colab.research.google.com/drive/1p1GjuY8mrnZlx1IsC2F1hvqYusFJPmli?usp=sharing)")
     collab_link = st.text_input("Enter the localtunnel link to google collab running nougat_api.")
+
 
 if st.button("Run Command"):
     if input_type_option == 'Link':

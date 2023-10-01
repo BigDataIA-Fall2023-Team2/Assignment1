@@ -55,17 +55,23 @@ if st.button("Run Command"):
                         'start': page_num,  
                         'stop': page_num
                     }
-                    random_uuid = uuid.uuid4()
-                    files = {
-                    'file': (str(random_uuid) + "_" +str(page_num), file_content, 'application/pdf')
-                    }
-                    nougat_response = requests.post(collab_link+"/predict", headers=headers, files=files, params=params)
-                    if nougat_response.status_code == 200:
-                        st.write("Page No: " + str(page_num))
-                        st.write(nougat_response.text)
-                    else:
-                        st.error("Request failed with status code:" + str(nougat_response.status_code))
-                        st.error(nougat_response.text)
+                    request_counter =0
+                    while request_counter < 3:
+                        random_uuid = uuid.uuid4()
+                        files = {
+                        'file': (str(random_uuid) + "_" +str(page_num), file_content, 'application/pdf')
+                        }
+                        nougat_response = requests.post(collab_link+"/predict", headers=headers, files=files, params=params)
+                        if nougat_response.status_code == 200:
+                            st.write("Page No: " + str(page_num))
+                            st.write(nougat_response.text)
+                            break
+                        else:
+                            print("Request failed with status code:" + str(nougat_response.status_code))
+                            print(nougat_response.text)
+                            request_counter += 1
+                    if request_counter == 3:
+                        st.error("Multiple requests failed")
                         st.error("Please check your localtunnel to nougat_api on google collab!!!")
                         break
                 end_time = time.time()

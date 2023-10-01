@@ -81,6 +81,7 @@ if st.button("Run Command"):
             num_words=0
             reader = PdfReader(io.BytesIO(file_content))
             number_of_pages  = len(reader.pages)
+            st.write("Number of pages in the PDF are: " + str(number_of_pages))
             for page_num in range(number_of_pages):
                 page = reader.pages[page_num]
                 st.write("Page No: " + str(page_num+1))

@@ -1,7 +1,0 @@
-streamlit
-ydata-profiling
-pandas
-xlrd
-IPython
-ipywidgets
-streamlit_pandas_profiling

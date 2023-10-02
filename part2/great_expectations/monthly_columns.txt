@@ -1,0 +1,32 @@
+Loan Sequence Number
+Monthly Reporting Period
+Current Actual UPB
+Current Loan Delinquency Status
+Loan Age
+Remaining Months to Legal Maturity
+Defect Settlement Date
+Modification Flag
+Zero Balance Code
+Zero Balance Effective Date
+Current Interest Rate
+Current Deferred UPB
+Due Date of Last Paid Installment (DDLPI)
+MI Recoveries
+Net Sales Proceeds
+Non MI Recoveries
+Expenses
+Legal Costs
+Maintenance and Preservation Costs
+Taxes and Insurance
+Miscellaneous Expenses
+Actual Loss Calculation
+Modification Cost
+Step Modification Flag
+Deferred Payment Plan
+Estimated Loan-to-Value (ELTV)
+Zero Balance Removal UPB
+Delinquent Accrued Interest
+Delinquency Due to Disaster
+Borrower Assistance Status Code
+Current Month Modification Cost
+Interest Bearing UPB

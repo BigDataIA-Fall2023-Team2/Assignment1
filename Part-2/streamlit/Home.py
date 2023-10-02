@@ -5,7 +5,6 @@ from streamlit_pandas_profiling import st_profile_report
 import json
 
 
-
 st.title("Freddie mac single family dataset quality evaluation and summarization")
 st.write("Please upload the dataset in csv/xls file format and indicate if it is Origination/Monthly performance data")
 
@@ -30,7 +29,7 @@ if uploaded_file is not None:
     file_extension = uploaded_file.name.split('.')[1]
     if file_extension.lower() == "csv":
         df = pd.read_csv(uploaded_file, dtype = data_dtypes)
-        print("hi")
+      
     else:
         df = pd.read_excel(uploaded_file, dtype = data_dtypes)
     df.columns = column_names

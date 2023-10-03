@@ -16,6 +16,13 @@ Python | Streamlit | Google Collab | Pydpf | Nougat
 
 https://team2part1.streamlit.app/
 
+### Architecture digram ###
+
+![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment1/assets/131703516/f95de72c-28c5-4770-8ffe-3f6f67e8e58b)
+
+![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment1/assets/131703516/c8f3706f-2295-4e8f-9f2b-3b30b3935947)
+
+
 ### Project Flow
 
 The user uploads a pdf file in the application or can directly paste the URL of the pdf from a website. The user then has option to select which package (out of nougat or pydf) can be used for text extraction and summary of metrics. The user will then open a new google collab notebook at https://colab.google/ and run the below code. The google collab notebook will generate an output URL and the user has to sumbit this URL in the main page of the application. The application then extracts the text from pdf and displays text and other metrics such as number of pages, number of words.

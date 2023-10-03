@@ -3,6 +3,7 @@ import pandas as pd
 from ydata_profiling import ProfileReport as pr
 from streamlit_pandas_profiling import st_profile_report
 import json
+# from great_expectations.data_context import DataContext
 
 
 st.title("Freddie mac single family dataset quality evaluation and summarization")
@@ -34,6 +35,14 @@ if st.button("Submit"):
             df[date_type_column] = pd.to_datetime(df[date_type_column]).dt.strftime('%Y%m')
         st.write(df.head(5))
         
+        # suite = context.get_expectation_suite(origination_expectations_suit)  # Replace with your suite name
+        # is_running = suite.is_expectation_suite_configured()
+        # if is_running:
+        #     st.success("Great Expectations expectations are running.")
+        # else:
+        #     st.error("Great Expectations expectations are not configured.")
+
+
         profile = pr(df, explorative=True)
         st.write("Data Summary:")
         

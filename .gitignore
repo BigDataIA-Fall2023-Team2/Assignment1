@@ -155,3 +155,4 @@ cython_debug/
 .part*/
 */gx/*
 .DS*
+.gx_env/

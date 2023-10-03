@@ -1,0 +1,61 @@
+import re
+from great_expectations.expectations.expectation import Expectation, ExpectationConfiguration
+from great_expectations.expectations.util import render_evaluation_parameter_string
+
+class ExpectColumnValuesToBeValidYearMonth(Expectation):
+    """
+    Custom expectation to check if a column contains valid dates in the "yyyymm" format.
+    """
+
+    # This is where you define the parameters that users can configure when setting the expectation
+    # In this case, we allow users to specify a custom regex pattern
+    library_metadata = {
+        "expectation_type": "expect_column_values_to_be_valid_year_month",
+        "map_metric_to_value": "element_count"
+    }
+
+    # Initialize the expectation with any custom parameters
+    def __init__(self, configuration=None, meta=None, data=None):
+        super().__init__(configuration=configuration, meta=meta, data=data)
+        if data is not None:
+            self.regex_pattern = self.configuration.get("regex_pattern", r"^\d{6}$")
+        else:
+            self.regex_pattern = None
+
+    # Define the logic of the expectation
+    def _validate(self, batch):
+        success = True
+        unexpected_list = []
+        
+        for value in batch:
+            if not re.match(self.regex_pattern, value):
+                success = False
+                unexpected_list.append(value)
+
+        # Construct a result object with success and unexpected_list
+        return {
+            "success": success,
+            "unexpected_list": unexpected_list,
+        }
+
+    # Define a string representation of the expectation for documentation and reporting
+    @classmethod
+    def _default_configuration(cls):
+        return ExpectationConfiguration(
+            expectation_type="expect_column_values_to_be_valid_year_month",
+            regex_pattern=r"^\d{6}$",
+            include_config=True,
+            catch_exceptions=False,
+            meta=None
+        )
+
+    # Provide a string representation of any arguments to the expectation for display in data quality reports
+    def _base_message(self, unexpected_count, unexpected_list, unexpected_index_list):
+        return "Expected values to be valid dates in the 'yyyymm' format but found {unexpected_count} unexpected values."
+
+    # Define a human-readable representation of the custom expectation configuration
+    @classmethod
+    def _config(cls):
+        return {
+            "regex_pattern": "regex_pattern"
+        }

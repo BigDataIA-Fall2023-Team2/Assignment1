@@ -1,23 +1,25 @@
 {
   "origination_expectations":[
   {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": ["column1", "column2", "column3"]
+      }
+  },    
+  {
     "column": "Credit Score",
-    "expectation_type": "expect_column_values_to_be_of_type",
+    "expectation_type": "expect_column_values_to_be_between",
     "kwargs": {
       "type_": "int",
       "min_value": 350,
-      "max_value": 850
+      "max_value": 850,
+      "mostly": 1.0
+    },
+    "meta": {
+      "included_values": ["9999"]
     }
   },
-  {
-    "column": "Credit Score",
-    "expectation_type": "expect_column_values_to_be_of_type",
-    "kwargs": {
-      "type_": "int",
-      "mostly": 1.0,
-      "max_value": 9999
-    }
-  },
+
   {
     "column": "First Payment Date",
     "expectation_type": "expect_column_values_to_match_regex",
@@ -26,12 +28,28 @@
     }
   },
   {
+    "expectations": [
+      {
+        "expectation_type": "expect_column_values_to_be_valid_year_month",
+        "kwargs": {
+          "column": "YourDateColumn",
+          "regex_pattern": "^\d{4}01$"
+        }
+      }
+    ]
+  },
+  
+  {
     "column": "First Time Homebuyer Flag",
     "expectation_type": "expect_column_values_to_match_regex",
     "kwargs": {
-      "regex": "^[A-Za-z]$"
+      "regex": "^(Y|N)$"
+    },
+    "meta": {
+      "exception_list": ["9"]
     }
   },
+
   {
     "column": "Maturity Date",
     "expectation_type": "expect_column_values_to_match_regex",
@@ -50,20 +68,15 @@
   },
   {
     "column": "Mortgage Insurance Percentage (MI %)",
-    "expectation_type": "expect_column_values_to_be_of_type",
+    "expectation_type": "expect_column_values_to_be_between",
     "kwargs": {
-      "type_": "int",
-      "mostly": 1.0,
-      "max_value": 999
-    }
-  },
-  {
-    "column": "Number of Units",
-    "expectation_type": "expect_column_values_to_be_of_type",
-    "kwargs": {
-      "type_": "int",
-      "mostly": 1.0,
-      "max_value": 99
+      "min_value": 0,
+      "max_value": 100,
+      "parse_strings_as_datetimes": false,
+      "mostly": 1.0
+    },
+    "meta": {
+      "included_values": ["999"]
     }
   },
   {
@@ -74,6 +87,22 @@
     }
   },
   {
+    "column": "NUMBER OF UNITS",
+    "expectation_type": "expect_column_values_to_be_in_set",
+    "kwargs": {
+      "value_set": [1, 2, 3, 4, 99]
+    }
+  },
+
+  {
+    "column": "OCCUPANCY STATUS",
+    "expectation_type": "expect_column_values_to_be_in_set",
+    "kwargs": {
+      "value_set": ["P", "I", "S", "9"]
+    }
+  },
+
+  {
     "column": "Original Combined Loan-to-Value (CLTV)",
     "expectation_type": "expect_column_values_to_be_of_type",
     "kwargs": {
@@ -82,13 +111,18 @@
       "max_value": 999
     }
   },
+
   {
-    "column": "Original Debt-to-Income (DTI) Ratio",
-    "expectation_type": "expect_column_values_to_be_of_type",
-    "kwargs": {
-      "type_": "int",
-      "mostly": 1.0,
-      "max_value": 999
+  "column": "Original Debt-to-Income (DTI) Ratio",
+  "expectation_type": "expect_column_values_to_be_between",
+  "kwargs": {
+    "min_value": 1,
+    "max_value": 998,
+    "parse_strings_as_datetimes": false,
+    "mostly": 1.0
+  },
+  "meta": {
+    "included_values": ["999"]
     }
   },
   {
@@ -97,7 +131,8 @@
     "kwargs": {
       "type_": "int",
       "mostly": 1.0,
-      "max_value": 999999999999
+      "min_value":1000,
+      "max_value": 999999999
     }
   },
   {
@@ -106,7 +141,15 @@
     "kwargs": {
       "type_": "int",
       "mostly": 1.0,
+      "min_value":1,
       "max_value": 999
+    }
+  },
+  {
+    "column": "Original Interest Rate",
+    "expectation_type": "expect_column_values_to_be_of_type",
+    "kwargs": {
+      "type_": "float"
     }
   },
   {
@@ -117,63 +160,71 @@
     }
   },
   {
-    "column": "Channel",
-    "expectation_type": "expect_column_values_to_match_regex",
+    "column": "CHANNEL",
+    "expectation_type": "expect_column_values_to_be_in_set",
     "kwargs": {
-      "regex": "^[A-Za-z]$"
+      "value_set": ["R", "B", "C", "T", "9"],
+      "type_": "object"
     }
   },
   {
-    "column": "Prepayment Penalty Mortgage (PPM) Flag",
-    "expectation_type": "expect_column_values_to_match_regex",
+    "column": "PREPAYMENT PENALTY MORTGAGE (PPM) FLAG",
+    "expectation_type": "expect_column_values_to_be_in_set",
     "kwargs": {
-      "regex": "^[A-Za-z]$"
+      "value_set": ["Y", "N"]
     }
   },
   {
-    "column": "Amortization Type (Formerly Product Type)",
-    "expectation_type": "expect_column_values_to_match_regex",
+    "column": "AMORTIZATION TYPE",
+    "expectation_type": "expect_column_values_to_be_in_set",
     "kwargs": {
-      "regex": "^[A-Za-z0-9]{1,5}$"
+      "value_set": ["FRM", "ARM"]
     }
   },
   {
-    "column": "Property State",
-    "expectation_type": "expect_column_values_to_match_regex",
+    "column": "PROPERTY STATE",
+    "expectation_type": "expect_column_values_to_be_in_set",
     "kwargs": {
-      "regex": "^[A-Za-z0-9]{1,2}$"
+      "value_set": [
+        "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY",
+        "AS", "DC", "FM", "GU", "MH", "MP", "PW", "PR", "VI",
+        "UM"  
+      ]
     }
   },
+
   {
-    "column": "Property Type",
-    "expectation_type": "expect_column_values_to_match_regex",
+    "column": "PROPERTY TYPE",
+    "expectation_type": "expect_column_values_to_be_in_set",
     "kwargs": {
-      "regex": "^[A-Za-z0-9]{1,2}$"
+      "value_set": ["CO", "PU", "MH", "SF", "CP", "99"]
     }
   },
-  {
-    "column": "Postal Code",
-    "expectation_type": "expect_column_values_to_be_of_type",
-    "kwargs": {
-      "type_": "int",
-      "mostly": 1.0,
-      "max_value": 99999
-    }
-  },
+
+{
+  "column": "POSTAL CODE",
+  "expectation_type": "expect_column_values_to_match_regex",
+  "kwargs": {
+    "regex": "^\d{1,5}$"
+  }
+},
+
   {
     "column": "Loan Sequence Number",
     "expectation_type": "expect_column_values_to_match_regex",
     "kwargs": {
-      "regex": "^[A-Za-z0-9]{12}$"
+      "regex": "^[FA]\\d{4}[Q][1-4]\\d{7}$"
     }
   },
+  
   {
     "column": "Loan Purpose",
-    "expectation_type": "expect_column_values_to_match_regex",
+    "expectation_type": "expect_column_values_to_be_in_set",
     "kwargs": {
-      "regex": "^[A-Za-z]$"
+      "value_set": ["P", "C", "N", "R", "9"]
     }
   },
+
   {
     "column": "Original Loan Term",
     "expectation_type": "expect_column_values_to_be_of_type",
@@ -190,13 +241,25 @@
       "type_": "int",
       "mostly": 1.0,
       "max_value": 99
+    },
+    "meta": {
+      "included_values": ["999"]
     }
   },
+
+  {
+    "column": "Number of Borrowers",
+    "expectation_type": "expect_column_values_to_match_regex",
+    "kwargs": {
+      "regex": "^(01|02|03|04|05|06|07|08|09|10)$"
+    }
+  },
+  
   {
     "column": "Seller Name",
     "expectation_type": "expect_column_values_to_match_regex",
     "kwargs": {
-      "regex": "^[A-Za-z0-9 ]{1,60}$"
+      "regex": "^[A-Za-z]{1,60}$"
     }
   },
   {
@@ -213,6 +276,15 @@
       "regex": "^[A-Za-z]$"
     }
   },
+
+  {
+    "column": "Program Indicator",
+    "expectation_type": "expect_column_values_to_be_in_set",
+    "kwargs": {
+      "value_set": ["H", "F", "R", "9"]
+    }
+  },
+
   {
     "column": "Pre-HARP Loan Sequence Number",
     "expectation_type": "expect_column_values_to_match_regex",

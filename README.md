@@ -18,9 +18,11 @@ https://team2part1bigdata.streamlit.app/
 
 ### Architecture digram ###
 
-![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment1/assets/131703516/f95de72c-28c5-4770-8ffe-3f6f67e8e58b)
+![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment1/assets/131703516/48d5167d-0a34-48a6-8e01-cb487a8aba85)
 
-![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment1/assets/131703516/c8f3706f-2295-4e8f-9f2b-3b30b3935947)
+
+![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment1/assets/131703516/9f21a8dc-6bf5-48b0-9a7e-14f3f7bee719)
+
 
 
 ### Project Flow

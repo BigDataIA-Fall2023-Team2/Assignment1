@@ -16,7 +16,7 @@ Python | Streamlit | Google Collab | Pydpf | Nougat
 
 https://team2part1bigdata.streamlit.app/
 
-### Architecture digram ###
+### Architecture diagram ###
 
 ![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment1/assets/131703516/48d5167d-0a34-48a6-8e01-cb487a8aba85)
 

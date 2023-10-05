@@ -1,0 +1,21 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "origination_expectations_suit1.json",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "Credit Score",
+        "max_value": 850,
+        "min_value": 350,
+        "mostly": 1.0,
+        "type_": "int"
+      },
+      "meta": {}
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "great_expectations_version": "0.17.19"
+  }
+}

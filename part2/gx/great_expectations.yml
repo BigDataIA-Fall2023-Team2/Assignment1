@@ -12,6 +12,9 @@ config_version: 3.0
 
 # Datasources tell Great Expectations where your data lives and how to get it.
 # Read more at https://docs.greatexpectations.io/docs/guides/connecting_to_your_data/connect_to_data_overview
+
+datasources: {}
+=======
 datasources:
   my_datasource:
     class_name: PandasDatasource
@@ -99,9 +102,12 @@ data_docs_sites:
     site_index_builder:
       class_name: DefaultSiteIndexBuilder
 
-anonymous_usage_statistics:
-  data_context_id: b4fdcd9b-0ebd-43da-97d7-7163771ba6f4
+anonymous_usage_statistic
+  data_context_id: 933bcf0b-f5ec-4a11-9644-b7f33b227a4e
   enabled: true
+fluent_datasources:
+  pandas_dataframe_datasource:
+    type: pandas
 notebooks:
 include_rendered_content:
   globally: false

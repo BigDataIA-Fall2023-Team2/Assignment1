@@ -1,0 +1,580 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "monthly_expectations_suite",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": [
+          "Loan Sequence Number",
+          "Monthly Reporting Period",
+          "Current Actual UPB",
+          "Current Loan Delinquency Status",
+          "Loan Age",
+          "Remaining Months to Legal Maturity",
+          "Defect Settlement Date",
+          "Modification Flag",
+          "Zero Balance Code",
+          "Zero Balance Effective Date",
+          "Current Interest Rate",
+          "Current Deferred UPB",
+          "Due Date of Last Paid Installment (DDLPI)",
+          "MI Recoveries",
+          "Net Sales Proceeds",
+          "Non MI Recoveries",
+          "Expenses",
+          "Legal Costs",
+          "Maintenance and Preservation Costs",
+          "Taxes and Insurance",
+          "Miscellaneous Expenses",
+          "Actual Loss Calculation",
+          "Modification Cost",
+          "Step Modification Flag",
+          "Deferred Payment Plan",
+          "Estimated Loan-to-Value (ELTV)",
+          "Zero Balance Removal UPB",
+          "Delinquent Accrued Interest",
+          "Delinquency Due to Disaster",
+          "Borrower Assistance Status Code",
+          "Current Month Modification Cost",
+          "Interest Bearing UPB"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Loan Sequence Number"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Monthly Reporting Period"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Current Actual UPB"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Current Loan Delinquency Status"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Loan Age"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Remaining Months to Legal Maturity"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Defect Settlement Date"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Modification Flag"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Zero Balance Code"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Zero Balance Effective Date"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Current Interest Rate"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Current Deferred UPB"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Due Date of Last Paid Installment (DDLPI)"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "MI Recoveries"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Net Sales Proceeds"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Non MI Recoveries"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Expenses"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Legal Costs"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Maintenance and Preservation Costs"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Taxes and Insurance"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Miscellaneous Expenses"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Actual Loss Calculation"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Modification Cost"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Step Modification Flag"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Deferred Payment Plan"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Estimated Loan-to-Value (ELTV)"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Zero Balance Removal UPB"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Delinquent Accrued Interest"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Delinquency Due to Disaster"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Borrower Assistance Status Code"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Current Month Modification Cost"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "Interest Bearing UPB"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Loan Sequence Number",
+        "regex": "^[FA]\\d{2}[Q][1-4]\\d{7}$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Monthly Reporting Period",
+        "regex": "^[0-9]{6}$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Current Actual UPB",
+        "mostly": 1.0,
+        "regex": "^(?:(?:\\d{1,10}(?:\\.\\d{1,2})?)|\\d{1,12})$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "Current Loan Delinquency Status",
+        "type_list": [
+          "int",
+          "str"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Current Loan Delinquency Status",
+        "regex": "^(0|[1-9][0-9]{0,2}|XX)$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "Loan Age",
+        "max_value": 999,
+        "min_value": 0
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "Remaining Months to Legal Maturity",
+        "max_value": 999,
+        "min_value": 0
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Defect Settlement Date",
+        "regex": "^[0-9]{6}$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "Modification Flag",
+        "value_set": [
+          "Y",
+          "P",
+          " "
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "Zero Balance Code",
+        "value_set": [
+          "01",
+          "02",
+          "03",
+          "96",
+          "09",
+          "15",
+          "16"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Zero Balance Effective Date",
+        "regex": "^\\d{6}| {6}$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Current Interest Rate",
+        "regex": "^(?:(?:\\d{1,5}(?:\\.\\d{1,3})?)|\\d{1,8})$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Current Deferred UPB",
+        "regex": "^(?:(?:\\d{1,10}(?:\\.\\d{1,2})?)|\\d{1,12})$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Due Date of Last Paid Installment (DDLPI)",
+        "regex": "^[0-9]{6}$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "MI Recoveries",
+        "regex": "^(?:(?:\\d{1,10}(?:\\.\\d{1,2})?)|\\d{1,12})$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "Net Sales Proceeds",
+        "type_": "String"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_value_lengths_to_be_between",
+      "kwargs": {
+        "column": "Net Sales Proceeds",
+        "max_value": 13,
+        "min_value": 0
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Non MI Recoveries",
+        "regex": "^(?:(?:\\d{1,10}(?:\\.\\d{1,2})?)|\\d{1,12})$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Expenses",
+        "regex": "^(?:(?:\\d{1,10}(?:\\.\\d{1,2})?)|\\d{1,12})$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Legal Costs",
+        "regex": "^(?:(?:\\d{1,10}(?:\\.\\d{1,2})?)|\\d{1,12})$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Maintenance and Preservation Costs",
+        "regex": "^(?:(?:\\d{1,10}(?:\\.\\d{1,2})?)|\\d{1,12})$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Taxes and Insurance",
+        "regex": "^(?:(?:\\d{1,10}(?:\\.\\d{1,2})?)|\\d{1,12})$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Miscellaneous Expenses",
+        "regex": "^(?:(?:\\d{1,10}(?:\\.\\d{1,2})?)|\\d{1,12})$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Actual Loss Calculation",
+        "regex": "^(?:(?:\\d{1,10}(?:\\.\\d{1,2})?)|\\d{1,12})$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Modification Cost",
+        "regex": "^(?:(?:\\d{1,10}(?:\\.\\d{1,2})?)|\\d{1,12})$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "Step Modification Flag",
+        "value_set": [
+          "Y",
+          "N",
+          " "
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "Deferred Payment Plan",
+        "value_set": [
+          "Y",
+          "P",
+          " "
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "Estimated Loan-to-Value (ELTV)",
+        "max_value": 999,
+        "min_value": 0
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Zero Balance Removal UPB",
+        "regex": "^(?:(?:\\d{1,10}(?:\\.\\d{1,2})?)|\\d{1,12})$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Delinquent Accrued Interest",
+        "regex": "^(?:(?:\\d{1,10}(?:\\.\\d{1,2})?)|\\d{1,12})$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "Delinquency Due to Disaster",
+        "value_set": [
+          "Y"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "Borrower Assistance Status Code",
+        "value_set": [
+          "F",
+          "R",
+          "T"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Current Month Modification Cost",
+        "regex": "^(?:(?:\\d{1,10}(?:\\.\\d{1,2})?)|\\d{1,12})$"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "Interest Bearing UPB",
+        "regex": "^(?:(?:\\d{1,10}(?:\\.\\d{1,2})?)|\\d{1,12})$"
+      },
+      "meta": {}
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "great_expectations_version": "0.17.19"
+  }
+}

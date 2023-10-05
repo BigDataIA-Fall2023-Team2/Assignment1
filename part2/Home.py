@@ -23,7 +23,7 @@ def profile_data(df):
         
         
 def process_file(uploaded_file, datatype_option):
-    with open(datatype_option.lower() + '_columns.txt', 'r') as file:
+    with open("./"+datatype_option.lower() + '_columns.txt', 'r') as file:
         column_names = [line.strip() for line in file]
     if uploaded_file.name.split('.')[1].lower() == "csv":
         df = pd.read_csv(uploaded_file)

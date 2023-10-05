@@ -23,10 +23,8 @@ def profile_data(df):
         
         
 def process_file(uploaded_file, datatype_option):
-    st.write(os.getcwd())
-    st.write(os.getcwd().split('/')[-1])
     if os.getcwd().split('/')[-1] != "part2":  #added to fix the directory issue on streamlit cloud deployment
-        os.chdir("./part2")
+        os.chdir("/mount/src/assignment1/part2")
     with open("./"+datatype_option.lower() + '_columns.txt', 'r') as file:
         column_names = [line.strip() for line in file]
     if uploaded_file.name.split('.')[1].lower() == "csv":

@@ -19,11 +19,27 @@ ordered_list_origination_expectation_configuration = ExpectationConfiguration(
     },
 )
 origination_expectations_suite.add_expectation(expectation_configuration=ordered_list_origination_expectation_configuration)
-for expectation in expectations['origination_expectations']:
-    expectation_config = ExpectationConfiguration(
-            expectation_type=expectation['expectation_type'],
-            kwargs=expectation['kwargs']
+for column in column_names:
+    not_null_origination_expectation_configuration = ExpectationConfiguration(
+        expectation_type="expect_column_values_to_not_be_null",
+        kwargs={
+            "column": column
+        },
     )
+    origination_expectations_suite.add_expectation(not_null_origination_expectation_configuration)
+
+for expectation in expectations['origination_expectations']:
+    if 'meta' not in expectation:
+        expectation_config = ExpectationConfiguration(
+                expectation_type=expectation['expectation_type'],
+                kwargs=expectation['kwargs']
+        )
+    else:
+        expectation_config = ExpectationConfiguration(
+                expectation_type=expectation['expectation_type'],
+                kwargs=expectation['kwargs'],
+                meta=expectation["meta"]
+        )
     origination_expectations_suite.add_expectation(expectation_config)
 context.save_expectation_suite(origination_expectations_suite)
 
@@ -38,21 +54,26 @@ ordered_list_monthly_expectation_configuration = ExpectationConfiguration(
     },
 )
 monthly_expectations_suite.add_expectation(expectation_configuration=ordered_list_monthly_expectation_configuration)
-for expectation in expectations['monthly_expectations']:
-    expectation_config = ExpectationConfiguration(
-            expectation_type=expectation['expectation_type'],
-            kwargs=expectation['kwargs']
+for column in column_names:
+    not_null_origination_expectation_configuration = ExpectationConfiguration(
+        expectation_type="expect_column_values_to_not_be_null",
+        kwargs={
+            "column": column
+        },
     )
-    origination_expectations_suite.add_expectation(expectation_config)
+    monthly_expectations_suite.add_expectation(not_null_origination_expectation_configuration)
+for expectation in expectations['monthly_expectations']:
+    if 'meta' not in expectation:
+        expectation_config = ExpectationConfiguration(
+                expectation_type=expectation['expectation_type'],
+                kwargs=expectation['kwargs']
+        )
+    else:
+        expectation_config = ExpectationConfiguration(
+                expectation_type=expectation['expectation_type'],
+                kwargs=expectation['kwargs'],
+                meta=expectation["meta"]
+        )
+    monthly_expectations_suite.add_expectation(expectation_config)
 context.save_expectation_suite(monthly_expectations_suite)
 
-config = context.get_config()
-print(config["data_docs_sites"]["local_site"]["store_backend"]["base_directory"])
-config["data_docs_sites"]["local_site"]["store_backend"]["base_directory"]= "./temp_validation/"
-print(config["data_docs_sites"]["local_site"]["store_backend"]["base_directory"])
-
-context.set_config(config)
-
-
-config = context.get_config()
-print(config["data_docs_sites"]["local_site"]["store_backend"]["base_directory"])

@@ -1,17 +1,17 @@
-# Assignment1 (Text extraction from PDF)
+# Assignment 1 - Part 1 (Text extraction from PDF)
  
 
 ### Project Descrition 
 Extracting and showing text from a pdf (using nougat & pypdf package) and generate a summary of metrics such as number of words, number of pages etc.
 
-Below were the differences observed while doing text extraction using the two packages:
+Below were the points observed while doing text extraction using the two packages:
 
 |                   | Nougat                        | PyPDF                        |
 | ----------------- | ----------------------------- | ----------------------------- |
-| **Execution Time**| 7.65 sec (for 6 pages)        | 0.19 sec (for 6 pages)        |
-| **Text Extraction**| - A new line is treated as a new line while extracting text. <br> - Text is displayed using '/n' and understands tabular data formats. <br> - Recognizes heading formatting and titles but may lose content due to excessive spaces. May also contain spelling errors, e.g., "sigature."| - A new line is not considered as a new line; text is displayed continuously. <br> - Doesn't understand tabular data formats. <br> - Does not recognize heading formatting and titles but preserves content even with repeated spaces. No spelling mistakes. |
-| **Financial Symbols**| Cannot recognize financial symbols or jargon. | Cannot recognize financial symbols or jargon. |
-| **Serial Number**| Can recognize pointers or serial numbers and modifies it. | Cannot recognize pointers or serial numbers It will show case as text only |
+| **Execution Time**| It took 7.65 sec (for 6 pages)        | It took 0.19 sec (for 6 pages)        |
+| **Text Extraction**| - A new line is treated as a new line while extracting text. <br> - It understands tabular data formats as text formatting is shown using '/n'. <br> - Recognizes heading formatting and titles. <br> - It may lose content due to excessive spaces. <br> - It may also contain spelling errors, e.g. "cigature." | - A new line is not considered as a new line as the text is displayed continuously one after the other. <br> - It doesn't understand tabular data formats. <br> - It does not recognize heading formatting and titles. <br> - It preserves content even with repeated spaces. <br> - No spelling mistakes were observed. |
+| **Financial Symbols**| It cannot recognize financial symbols or jargon. | It cannot recognize financial symbols or jargon. |
+| **Serial Number**| It can recognize pointers or serial numbers and modify it. | It cannot recognize pointers or serial numbers. It will show case as text only |
 
 
 ### Project Resources
@@ -205,3 +205,8 @@ The above code is used for pypdf part. Here we are checking if link or pdf is va
 
 ### Contributions
 
+| Name                            | Contribution                  |  
+| ------------------------------- | ------------------------------|
+| Chinmay Gandi                   | PyPdf                         |
+| Dhawal Negi, Shardul Chavan     | Nougat                        |
+| Chinmay Gandi, Shardul Chavan   | Nougat vs PyPdf               | 

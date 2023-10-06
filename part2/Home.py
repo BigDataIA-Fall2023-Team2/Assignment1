@@ -23,7 +23,7 @@ def profile_data(df):
         
         
 def process_file(uploaded_file, datatype_option):
-    if os.getcwd() != "/mount/src/assignment1/part2":  #added to fix the directory issue on streamlit cloud deployment
+    if os.getcwd() == "/mount/src/assignment1/": #added to fix the directory issue on streamlit cloud deployment
         os.chdir("/mount/src/assignment1/part2")
     with open("./"+datatype_option.lower() + '_columns.txt', 'r') as file:
         column_names = [line.strip() for line in file]

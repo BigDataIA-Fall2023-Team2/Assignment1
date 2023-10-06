@@ -7,7 +7,7 @@ Extracting and showing text from a pdf (using nougat & pypdf package) and genera
 
 ### Project Resources
 
-(https://codelabs-preview.appspot.com/?file_id=1t61T-7IzchvC1qUAso0RRaTfmnOdUZSInwzfCeEK8QM#1)
+https://codelabs-preview.appspot.com/?file_id=1t61T-7IzchvC1qUAso0RRaTfmnOdUZSInwzfCeEK8QM#1
 
 ### Tech Stack
 Python | Streamlit | Google Collab | Pydpf | Nougat

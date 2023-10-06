@@ -2,6 +2,10 @@ from great_expectations.core.expectation_configuration import ExpectationConfigu
 from great_expectations.data_context import FileDataContext
 from great_expectations.core.expectation_configuration import ExpectationConfiguration
 import json
+import os, shutil
+
+if os.path.exists("./gx") and os.path.isdir("./gx"):
+    shutil.rmtree("./gx")
 
 with open("expectations.json", "r") as expectations_file:
     expectations = json.load(expectations_file)

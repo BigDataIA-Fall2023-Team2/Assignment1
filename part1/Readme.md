@@ -15,7 +15,7 @@ Below were the points observed while doing text extraction using the two package
 
 ### Application Link
 
-https://team2part1bigdata.streamlit.app/
+https://t2a1p1.streamlit.app/
 
 ### Project Resources
 

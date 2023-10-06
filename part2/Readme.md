@@ -5,7 +5,7 @@ Using Pandas data profiling to generate a data profiling report and using great 
 
 ### Project Resources
 
-(https://codelabs-preview.appspot.com/?file_id=1t61T-7IzchvC1qUAso0RRaTfmnOdUZSInwzfCeEK8QM#1)
+https://codelabs-preview.appspot.com/?file_id=1t61T-7IzchvC1qUAso0RRaTfmnOdUZSInwzfCeEK8QM#1
 
 https://freddiemac.embs.com/
 
@@ -124,7 +124,6 @@ context.save_expectation_suite(monthly_expectations_suite)
 
 ***Home.py***
 
-Our code starts from here:
 
 ```
 import os,re,uuid

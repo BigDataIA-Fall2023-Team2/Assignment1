@@ -251,7 +251,8 @@ The above code is being used for validating the data using great expectations. H
 
 ### Repo Structure
 
-![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment1/assets/131703516/ac97f3b0-f726-412a-9e27-5c4d02389af2)
+![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment1/assets/131703516/a4601ac7-bffb-432a-a063-3b5240af2829)
+
 
 
 

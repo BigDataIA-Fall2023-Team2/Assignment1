@@ -21,6 +21,10 @@ https://t2a1p1.streamlit.app/
 
 https://codelabs-preview.appspot.com/?file_id=1t61T-7IzchvC1qUAso0RRaTfmnOdUZSInwzfCeEK8QM#7
 
+### Project Demo 
+
+https://www.youtube.com/watch?v=SEqMB00-zDw
+
 ### Tech Stack
 Python | Streamlit | Google Collab | Pydpf | Nougat
 

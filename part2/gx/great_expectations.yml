@@ -12,16 +12,7 @@ config_version: 3.0
 
 # Datasources tell Great Expectations where your data lives and how to get it.
 # Read more at https://docs.greatexpectations.io/docs/guides/connecting_to_your_data/connect_to_data_overview
-
 datasources: {}
-=======
-datasources:
-  my_datasource:
-    class_name: PandasDatasource
-    module_name: great_expectations.datasource
-    data_asset_type:
-      class_name: PandasDataset
-      module_name:
 
 # This config file supports variable substitution which enables: 1) keeping
 # secrets out of source control & 2) environment-based configuration changes
@@ -102,12 +93,16 @@ data_docs_sites:
     site_index_builder:
       class_name: DefaultSiteIndexBuilder
 
-anonymous_usage_statistic
-  data_context_id: 933bcf0b-f5ec-4a11-9644-b7f33b227a4e
+anonymous_usage_statistics:
+  data_context_id: 7ebea59a-845c-4a46-9029-fd93ab32f097
   enabled: true
 fluent_datasources:
   pandas_dataframe_datasource:
     type: pandas
+    assets:
+      asset_originationdata_95312e59-8620-49e1-9004-ab83ce475f79:
+        type: dataframe
+        batch_metadata: {}
 notebooks:
 include_rendered_content:
   globally: false

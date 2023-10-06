@@ -1,4 +1,4 @@
-# Assignment1 (Data Profiling and Validation from CSV/Excel Files)
+# Assignment 1 - Part 2 (Data Profiling and Validation)
 
 ### Project Descrition 
 Using Pandas data profiling to generate a data profiling report and using great expectations to validate the same. The data here used as an input file from https://freddiemac.embs.com/. 
@@ -256,6 +256,6 @@ The above code is being used for validating the data using great expectations. H
 
 | Name                            | Contribution                  |  
 | ------------------------------- | ------------------------------|
-| Dhawal Negi                     |  Data Profiling               |
+| Dhawal Negi                     | Data Profiling               |
 | Dhawal Negi                     | Expectation Suite validation  |
 | Chinmay Gandi, Shardul Chavan   | Expectation Suite expectations| 

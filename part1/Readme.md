@@ -191,41 +191,8 @@ The above code is used for pypdf part. Here we are checking if link or pdf is va
 
 ### Repository Structure
 
-```
-.
-└── Assignment1
-    ├── Assignment1
-    │   ├── LICENSE
-    │   ├── Part-2
-    │   │   └── streamlit
-    │   │       ├── Home.py
-    │   │       ├── gx
-    │   │       │   ├── checkpoints
-    │   │       │   ├── expectations
-    │   │       │   ├── great_expectations.yml
-    │   │       │   ├── plugins
-    │   │       │   │   └── custom_data_docs
-    │   │       │   │       ├── renderers
-    │   │       │   │       ├── styles
-    │   │       │   │       │   └── data_docs_custom_styles.css
-    │   │       │   │       └── views
-    │   │       │   ├── profilers
-    │   │       │   └── uncommitted
-    │   │       │       ├── config_variables.yml
-    │   │       │       ├── data_docs
-    │   │       │       └── validations
-    │   │       ├── monthly_columns.txt
-    │   │       ├── origination_columns.txt
-    │   │       └── requirement.txt
-    │   ├── README.md
-    │   └── part1
-    │       ├── Home.py
-    │       ├── nougat
-    │       │   └── {output_dir}
-    │       ├── pypdf
-    │       └── requirements.txt
-    ├── LICENSE
-    └── README.md
-```
+![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment1/assets/131703516/3f63ba73-1a0d-47af-8da2-c749f7d51d74)
+
+
 ### Contributions
 

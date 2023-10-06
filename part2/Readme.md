@@ -3,6 +3,9 @@
 ### Project Descrition ###
 Using Pandas data profiling to generate a data profiling report and using great expectations to validate the same. The data here used as an input file from https://freddiemac.embs.com/. 
 
+### Application Link ###
+https://team2assignment1part2.streamlit.app/
+
 ### Project Resources ###
 
 https://codelabs-preview.appspot.com/?file_id=1I9T3brvdH5yQdfWt2GJ58brCZilZj-V2mS75mKyq3-w#3
@@ -15,9 +18,6 @@ Python | Streamlit | Great Expectations | Pandas profiling
 ### Architecture diagram ###
 
 ![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment1/assets/131703516/19a6bf44-b491-4506-8673-5670ae1d30c3)
-
-### Application Link ###
-https://team2assignment1part2.streamlit.app/
 
 ### Project Flow
 

@@ -22,7 +22,7 @@ The user uploads a csv/excel file from Freddieemac website and specifies what ty
 
 ### Code Explaination
 
-There are two important files expectation_suits_builder.py and home.py. The expectation_suits_builder.py is used for generating the great expectation suit and home.py is used for showcasing the validation results of great expectation and generating data profling report of the uploaded excel/csv. Apart from that there is an expectation.json file that we are using that contains all the required expectations in json format. 
+There are two important files - expectation_suits_builder.py and home.py. The expectation_suits_builder.py is used for generating the great expectation suit and home.py is used for showcasing the validation results of great expectation and generating data profling report of the uploaded excel/csv. Apart from that there is an expectation.json file that we are using that contains all the required expectations in json format. 
 
 ***expectation_suits_builder.py***
 

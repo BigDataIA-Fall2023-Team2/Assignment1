@@ -1,13 +1,16 @@
 # Assignment 1 - Part 2 (Data Profiling and Validation)
 
-### Project Descrition 
+### Project Descrition ###
 Using Pandas data profiling to generate a data profiling report and using great expectations to validate the same. The data here used as an input file from https://freddiemac.embs.com/. 
 
-### Project Resources
+### Project Resources ###
 
-https://codelabs-preview.appspot.com/?file_id=1t61T-7IzchvC1qUAso0RRaTfmnOdUZSInwzfCeEK8QM#1
+https://codelabs-preview.appspot.com/?file_id=1I9T3brvdH5yQdfWt2GJ58brCZilZj-V2mS75mKyq3-w#3
 
 https://freddiemac.embs.com/
+
+### Tech Stack ###
+Python | Streamlit | Great Expectations | Pandas profiling
 
 ### Architecture diagram ###
 

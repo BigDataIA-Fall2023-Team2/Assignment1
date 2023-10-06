@@ -4,13 +4,12 @@
 Using Pandas data profiling to generate a data profiling report and using great expectations to validate the same. The data here used as an input file from https://freddiemac.embs.com/. 
 
 ### Application Link ###
-https://team2assignment1part2.streamlit.app/
+https://t2p2a1.streamlit.app/
 
 ### Project Resources ###
 
 https://codelabs-preview.appspot.com/?file_id=1I9T3brvdH5yQdfWt2GJ58brCZilZj-V2mS75mKyq3-w#3
 
-https://freddiemac.embs.com/
 
 ### Tech Stack ###
 Python | Streamlit | Great Expectations | Pandas profiling

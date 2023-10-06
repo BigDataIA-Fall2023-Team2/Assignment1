@@ -10,6 +10,9 @@ https://t2p2a1.streamlit.app/
 
 https://codelabs-preview.appspot.com/?file_id=1I9T3brvdH5yQdfWt2GJ58brCZilZj-V2mS75mKyq3-w#3
 
+### Project Demo
+
+https://www.youtube.com/watch?v=CCIHIRlYaKk
 
 ### Tech Stack ###
 Python | Streamlit | Great Expectations | Pandas profiling

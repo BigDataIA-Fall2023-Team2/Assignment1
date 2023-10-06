@@ -13,6 +13,9 @@ Below were the points observed while doing text extraction using the two package
 | **Financial Symbols**| It cannot recognize financial symbols or jargon. | It cannot recognize financial symbols or jargon. |
 | **Serial Number**| It can recognize pointers or serial numbers and modify it. | It cannot recognize pointers or serial numbers. It will show case as text only |
 
+### Application Link
+
+https://team2part1bigdata.streamlit.app/
 
 ### Project Resources
 
@@ -20,10 +23,6 @@ https://codelabs-preview.appspot.com/?file_id=1t61T-7IzchvC1qUAso0RRaTfmnOdUZSIn
 
 ### Tech Stack
 Python | Streamlit | Google Collab | Pydpf | Nougat
-
-### Application Link
-
-https://team2part1bigdata.streamlit.app/
 
 ### Architecture diagram ###
 

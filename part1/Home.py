@@ -44,7 +44,7 @@ if st.button("Run Command"):
         if collab_link != "":
             if ((input_type_option == 'Link' and file_link != '') or (input_type_option == 'Upload a PDF' and uploaded_file is not None)):
                 start_time = time.time()
-                
+                num_words=0
                 reader = PdfReader(io.BytesIO(file_content))
                 number_of_pages  = len(reader.pages)
                 st.write("Number of pages in the PDF are: " + str(number_of_pages))
@@ -67,6 +67,7 @@ if st.button("Run Command"):
                         if nougat_response.status_code == 200:
                             st.write("Page No: " + str(page_num))
                             st.write(nougat_response.text)
+                            num_words += len(nougat_response.text.split())
                             break
                         else:
                             print("Request failed with status code:" + str(nougat_response.status_code))
@@ -79,6 +80,8 @@ if st.button("Run Command"):
                 end_time = time.time()
                 st.subheader("Time taken")
                 st.text(end_time - start_time )
+                st.subheader("Number of Words")
+                st.text(num_words)
             else:
                 pass
         else:

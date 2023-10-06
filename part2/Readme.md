@@ -13,6 +13,9 @@ https://freddiemac.embs.com/
 
 ![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment1/assets/131703516/19a6bf44-b491-4506-8673-5670ae1d30c3)
 
+### Application Link ###
+https://team2assignment1part2.streamlit.app/
+
 ### Project Flow
 
 The user uploads a csv/excel file from Freddieemac website and specifies what type of file it is - orgigination/monthly. The data will be then profiled using pandas profiling and validated using great expectations (python suite). A datadoc will be generated that will show case the data validation results.

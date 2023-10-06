@@ -36,7 +36,7 @@ https://team2part1bigdata.streamlit.app/
 
 ### Project Flow
 
-The user uploads a pdf file in the application or can directly paste the URL of the pdf from a website. The user then has option to select which package (out of nougat or pydf) can be used for text extraction and summary of metrics. The user will then open a new google collab notebook at https://colab.google/ and run the below code. The google collab notebook will generate an output URL and the user has to sumbit this URL in the main page of the application. The application then extracts the text from pdf and displays text and other metrics such as number of pages, number of words.
+The user uploads a pdf file in the application or can directly paste the URL of the pdf from a website. The user then has option to select the package (nougat or pydf) that can be used for text extraction of pdf and summary of metrics. The user will then open a new google collab notebook at https://colab.google/ and run the code present in the google collab notebook. The google collab notebook will generate an output URL and the user has to sumbit this URL in the application. The application then extracts the text from pdf and displays text and other metrics such as number of pages, number of words.
    
 
 ### Code Explaination
@@ -67,7 +67,7 @@ if library_option == 'Nougat':
     collab_link = st.text_input("Enter the localtunnel link to google collab running nougat_api.")
 
 ```
-In the above code we are firstly importing necessary packages, we are giving options to select either file link or pdf. Then we are giving radio buttons to select the package that can be used for execution as you can see in the library_option variable. If the library_option is nougat then it is asking user to launch the collab notebook using the URL mentioned. It is a publicly shared google collab notebook that contains the required code which user need to run. The generated output by google collab should be added in the input box of collab link. The collab contains the below code 
+In the above code we are firstly importing necessary packages, we are giving options to select either file link or pdf. Then we are giving radio buttons to select the package that can be used for execution as you can see in the library_option variable. If the library_option is nougat then it is asking the user to launch the collab notebook using the URL mentioned. It is a publicly shared google collab notebook that contains the required code which user need to run. The generated output by google collab should be added in the input box of collab link. The collab contains the below code 
 
 ```
 
@@ -82,7 +82,7 @@ In the above code we are firstly importing necessary packages, we are giving opt
 
 ```
 
-In the above code (which is in google collab) we are using localtunnel package of nodejs. LocalTunnel is a tool that allows you to expose a locally hosted web server or application to the internet. It creates a temporary public URL that you can use to access your local development server from anywhere on the internet. We are also installing nougat_ocr package with it. Then we are using the official command of nougat_ocr of calling the API as nougat_api and storing the command output in log file inside content directory. In the next line, using 'cat' command, we are reading the contents of the log file. Then the last command will generate a public URL where the application on local enviornment is running. 
+In the above code (which is in google collab) we are using localtunnel package of nodejs. LocalTunnel is a tool that allows you to expose a locally hosted web server or application to the internet. It creates a temporary public URL that you can use to access your local development server. We are also installing nougat_ocr package with it. Then we are using the official command of nougat_ocr of calling the API as nougat_api and storing the command output in log file inside content directory. In the next line, using 'cat' command, we are reading the contents of the log file. Then the last command will generate a public URL where the application on local enviornment is running. 
 
 ```
 if st.button("Run Command"):
@@ -104,7 +104,7 @@ if st.button("Run Command"):
             st.error("Please upload any Securities and Exchange commision form in pdf format.")
 
 ```
-The above code checks if the link and file that has been uploaded is correct or not. If the link is shared, response.get() tries to fetch the file and if there is an error while fetching it will raise an exception. If no file is uploaded then the exception to upload the form in pdf format will be raised. 
+The above code checks if the link and file that has been uploaded correctly. If the link is shared, response.get() tries to fetch the file and if there is an error while fetching it will raise an exception. If no file is uploaded then the exception to upload the form in pdf format will be raised. 
 
 ```
 if library_option == "Nougat":
@@ -153,24 +153,13 @@ if library_option == "Nougat":
     
 ```
 
-The code checks if the value of the variable library_option is equal to "Nougat." Within this "Nougat" section, the code checks multiple conditions before proceeding with certain actions:
+The code checks if the value of the variable library_option is equal to "Nougat." Within this "Nougat" section, the code checks multiple conditions before proceeding ahead :
 
-a. It first checks if the collab_link variable is not empty. This variable seems to represent a link or URL related to Google Colab.
+a. It first checks if the collab_link variable is empty. This variable represents the URL related to Google Colab.
 
-b. Next, it checks two conditions within an if statement:
-It checks if input_type_option is equal to 'Link' and if file_link is not empty. This condition seems to be related to how the input data is provided.
-Alternatively, it checks if input_type_option is equal to 'Upload a PDF' and if uploaded_file is not None. This condition suggests that the script can handle two different ways of providing input data: via a link or by uploading a PDF file.
+b. Next, it checks two conditions within - It checks if input_type_option is equal to 'Link' and if file_link is not empty. Alternatively, it checks if input_type_option is equal to 'Upload a PDF' and if uploaded_file is not provided. This condition suggests that the script can handle two different ways of providing input data: via a link or by uploading a PDF file.
 
-c. If both conditions in step 2b are met, it proceeds with the following actions:
-It calculates the current time as the start_time.
-It uses a PDF reader (PyPDF) to count the number of pages in the PDF file provided.
-It sends HTTP requests to a specified collab_link for each page of the PDF file. This involves setting up headers and parameters for the requests.
-For each page, it sends a POST request with the PDF page content as a file. If the response status code is 200 (indicating success), it prints the page number and the response content.
-If a request fails (status code other than 200), it retries the request up to three times before giving up. Failed requests are printed with the status code and response content.
-If, after three retries, a request still fails, it displays an error message indicating that multiple requests have failed.
-The script also measures and displays the time taken for this process.
-If any of the conditions in step 2 are not met, the script does not perform any actions (indicated by the "pass" statement).
-If the collab_link is empty, it displays an error message instructing the user to provide a localtunnel link to a Google Colab instance running the "nougat_api."
+c. It uses a PDF reader (PyPDF) to count the number of pages in the PDF file provided. It sends HTTP requests to a specified collab_link for each page of the PDF file. This involves setting up headers and parameters for the requests. For each page, it sends a POST request with the PDF page content as a file. If the response status code is 200 (indicating success), it prints the page number and the response content. If a request fails (status code other than 200), it retries the request up to three times before giving up. Failed requests are printed with the status code and response content. If, after three retries, a request still fails, it displays an error message indicating that multiple requests have failed. The script also measures and displays the time taken for this process. If any of the conditions in step 2 are not met, the script does not perform any actions (indicated by the "pass" statement). 
 
 
 ```
@@ -196,7 +185,7 @@ else:
             pass
 ```
 
-The above code is used for pypdf part. Here we are checking if link or pdf is valid or not. Then we are noting the start time of the process and reading the file contents (io.BytesIO(file_content)) and finding out the number of pages (len(reader.pages)).  We are then extracting text for each page one after the other (page.extract_text()) and calculating the number of words (len(extracted_text.split())). Then we are noting the end time of the process and calculating how much time it is taking for end to end pdf extraction.
+The above code is used for pypdf part. Here we are checking if link or pdf is valid. Then we are noting the start time of the process and reading the file contents (io.BytesIO(file_content)) and finding out the number of pages (len(reader.pages)). We are then extracting text for each page one after the other (page.extract_text()) and calculating the number of words (len(extracted_text.split())). Then we are noting the end time of the process and calculating how much time it is taking for end to end pdf extraction.
 
 ### Repository Structure
 

@@ -192,7 +192,9 @@ The above code is used for pypdf part. Here we are checking if link or pdf is va
 
 ### Repository Structure
 
-![image](https://github.com/BigDataIA-Fall2023-Team2/Assignment1/assets/131703516/6e2cb954-722c-4979-a008-c272205a16b7)
+
+![Image](https://github.com/BigDataIA-Fall2023-Team2/Assignment1/assets/25477682/82e90864-a7d0-4061-8215-dd960ebd7165)
+
 
 
 

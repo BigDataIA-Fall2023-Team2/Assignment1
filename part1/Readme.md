@@ -4,6 +4,15 @@
 ### Project Descrition 
 Extracting and showing text from a pdf (using nougat & pypdf package) and generate a summary of metrics such as number of words, number of pages etc.
 
+Below were the differences observed while doing text extraction using the two packages:
+
+|                   | Nougat                        | PyPDF                        |
+| ----------------- | ----------------------------- | ----------------------------- |
+| **Execution Time**| 7.65 sec (for 6 pages)        | 0.19 sec (for 6 pages)        |
+| **Text Extraction**| - A new line is treated as a new line while extracting text. <br> - Text is displayed using '/n' and understands tabular data formats. <br> - Recognizes heading formatting and titles but may lose content due to excessive spaces. May also contain spelling errors, e.g., "sigature."| - A new line is not considered as a new line; text is displayed continuously. <br> - Doesn't understand tabular data formats. <br> - Does not recognize heading formatting and titles but preserves content even with repeated spaces. No spelling mistakes. |
+| **Financial Symbols**| Cannot recognize financial symbols or jargon. | Cannot recognize financial symbols or jargon. |
+| **Serial Number**| Can recognize pointers or serial numbers and modifies it. | Cannot recognize pointers or serial numbers It will show case as text only |
+
 
 ### Project Resources
 
